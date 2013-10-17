@@ -3,13 +3,7 @@ package com.sun.multipleselector.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
 import com.sun.multipleselector.api.MultipleSelector;
 import com.sun.multipleselector.api.OnTextViewLoad;
 
@@ -71,6 +65,7 @@ public class MultipleSelectorArrayAdapter<T> extends ArrayAdapter<T>  implements
 		notifyDataSetChanged();
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public View getView(int position_, View convertView_, ViewGroup parent_) {
 		TextView listItemText  = null;
