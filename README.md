@@ -1,15 +1,14 @@
 Multiple Item Selector
 ======================
 Multiple Item Selector provides a simple way for you to populate a dialog with a List, for the purpose of selecting multiple items.
-The items selected by the user are returned via a simple listener in the form of a Collection. Have fun :)
+The items selected by the user are returned via a simple listener in the form of a Collection. Since it's backed by an ArrayAdapter,
+it will provide automatic scrolling and also manages your items for you. Have fun :)
 
 
 ![ScreenShot](https://raw.github.com/SundeepK/Multiple-Item-Selector/master/ScreenCaps/multipleItemSelectorCap.png)
 
 
 ## Configuration
-
-** Activity **
 
   ``` java
 public class MainActivity extends Activity implements MultipleItemSelector.OnClickListener<String>{
