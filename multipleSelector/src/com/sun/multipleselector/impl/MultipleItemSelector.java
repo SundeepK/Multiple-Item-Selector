@@ -88,7 +88,7 @@ public class MultipleItemSelector<T> {
 					}
 				}
 			})
-			.setTitle("Please select friend to remove");
+			.setTitle("Title of dialog");
 	
 		Dialog	dialog = builder.create();
 		return dialog;
