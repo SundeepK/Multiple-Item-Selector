@@ -7,7 +7,6 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.view.View;
 import android.widget.ListView;
 
 import com.sun.multipleselector.api.MultipleSelector;
@@ -41,16 +40,7 @@ public class MultipleItemSelector<T> {
 	}
 	
 	
-	public MultipleItemSelector(Context context_, View _viewParent, int resource_, int checkBox_,
-			int textView_, List<T> itemList_,  MultipleItemSelector.OnClickListener<T> onDialogClickListener_, 
-			OnTextViewLoad<T> adapterCallback_) {
-		_listAdapter = new MultipleSelectorArrayAdapter<T>(context_, _viewParent, resource_, checkBox_, textView_, itemList_, adapterCallback_);
-		_onDialogClickListener = onDialogClickListener_;
-		_list = new ListView(context_);
-		_list.setAdapter(_listAdapter);
-		_dialog = createNewDialog(context_);
-	}
-	
+
 	public interface OnClickListener<T>{
 		
 		public void onNegativeClick(DialogInterface dialog, int which);

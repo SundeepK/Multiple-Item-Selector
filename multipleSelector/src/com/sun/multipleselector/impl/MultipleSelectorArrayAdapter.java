@@ -27,7 +27,6 @@ public class MultipleSelectorArrayAdapter<T> extends ArrayAdapter<T> implements
 	private ViewHolder _viewHolder;
 	private OnTextViewLoad<T> _onTextLoadCallback;
 	private SparseBooleanArray _listItemStatus;
-	private View _cachedView;
 
 	public MultipleSelectorArrayAdapter(Context context_, int resource_,
 			int checkBox_, int textView_, List<T> iteamList_) {
@@ -52,18 +51,6 @@ public class MultipleSelectorArrayAdapter<T> extends ArrayAdapter<T> implements
 
 	}
 
-	public MultipleSelectorArrayAdapter(Context context_, View cachedView_,
-			int resource_, int checkBox_, int textView_, List<T> iteamList_,
-			OnTextViewLoad<T> onTextLoadCallback_) {
-		super(context_, resource_, iteamList_);
-		_checkBox = checkBox_;
-		_textView = textView_;
-		_inflator = LayoutInflater.from(context_);
-		_layout = resource_;
-		_listItemStatus = new SparseBooleanArray();
-		_onTextLoadCallback = onTextLoadCallback_;
-		_cachedView = cachedView_;
-	}
 
 	public void addAllToAdapter(Collection<T> items_) {
 		addAll(items_);
